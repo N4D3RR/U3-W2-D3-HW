@@ -6,12 +6,12 @@ const NetflixBar = () => {
   return (
     <Navbar expand="lg">
       <Container fluid>
-        <Navbar.Brand href="#">
+        <Link to="/" className="navbar-brand">
           <img
             src="src/assets/img/logo.png"
             style={{ width: "100px", height: "55px" }}
           />
-        </Navbar.Brand>
+        </Link>
         <Navbar.Toggle aria-controls="nav" />
         <Navbar.Collapse id="nav">
           <Nav className="me-auto mb-2 mb-lg-0">
