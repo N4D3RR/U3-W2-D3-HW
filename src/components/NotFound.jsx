@@ -18,7 +18,7 @@ const NotFound = function () {
                 navigate("/")
               }}
             >
-              Torna in home
+              Torna alla home
             </Button>
           </div>
         </Col>

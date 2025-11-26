@@ -81,7 +81,7 @@ const MovieCarousel = function ({ title, query }) {
                     style={{ cursor: "pointer" }}
                   >
                     <img
-                      onClick={() => navigate(`details/${movie.imdbID}`)}
+                      onClick={() => navigate(`/details/${movie.imdbID}`)}
                       src={movie.Poster}
                       alt={movie.Title}
                       className="img-fluid h-100"
@@ -102,7 +102,7 @@ const MovieCarousel = function ({ title, query }) {
                     style={{ cursor: "pointer" }}
                   >
                     <img
-                      onClick={() => navigate(`details/${movie.imdbID}`)}
+                      onClick={() => navigate(`/details/${movie.imdbID}`)}
                       src={movie.Poster}
                       alt={movie.Title}
                       className="img-fluid h-100"

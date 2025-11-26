@@ -4,13 +4,6 @@ import Footer from "./Footer"
 const ProfileSettings = () => {
   return (
     <Container fluid>
-      {/* LOGO */}
-      <img
-        src="src/assets/img/logo.png"
-        alt="Netflix Logo"
-        style={{ width: "100px", height: "55px" }}
-      />
-
       <Container className="w-50">
         <h1 className="fw-bold mb-3 text-white">Edit Profile</h1>
         <hr className="border-secondary" />

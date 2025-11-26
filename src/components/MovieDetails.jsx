@@ -51,7 +51,7 @@ const MovieDetails = function () {
   }, [])
 
   return (
-    <Container fluid>
+    <Container>
       <Row className="justify-content-center my-3">
         <Col xs={12} md={6} className="text-center">
           <h2 className="text-center text-white">Dettagli del film</h2>
