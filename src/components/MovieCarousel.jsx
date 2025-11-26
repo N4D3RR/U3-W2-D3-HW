@@ -1,10 +1,13 @@
 import { Carousel, CarouselItem, Col, Row, Spinner } from "react-bootstrap"
 import { useState, useEffect } from "react"
+import { useNavigate } from "react-router-dom"
 
 const MovieCarousel = function ({ title, query }) {
   const [movies, setMovies] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(false)
+
+  const navigate = useNavigate()
 
   // state = {
   //   movies: [],
@@ -78,6 +81,7 @@ const MovieCarousel = function ({ title, query }) {
                     style={{ cursor: "pointer" }}
                   >
                     <img
+                      onClick={() => navigate(`details/${movie.imdbID}`)}
                       src={movie.Poster}
                       alt={movie.Title}
                       className="img-fluid h-100"
@@ -98,6 +102,7 @@ const MovieCarousel = function ({ title, query }) {
                     style={{ cursor: "pointer" }}
                   >
                     <img
+                      onClick={() => navigate(`details/${movie.imdbID}`)}
                       src={movie.Poster}
                       alt={movie.Title}
                       className="img-fluid h-100"
