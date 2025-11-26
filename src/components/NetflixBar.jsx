@@ -1,6 +1,8 @@
 import { Navbar, Nav, Container } from "react-bootstrap"
+import { Link, useLocation } from "react-router-dom"
 
 const NetflixBar = () => {
+  const location = useLocation()
   return (
     <Navbar expand="lg">
       <Container fluid>
@@ -13,11 +15,66 @@ const NetflixBar = () => {
         <Navbar.Toggle aria-controls="nav" />
         <Navbar.Collapse id="nav">
           <Nav className="me-auto mb-2 mb-lg-0">
-            <Nav.Link className="fw-bold text-white ">Home</Nav.Link>
-            <Nav.Link className="fw-bold text-white">TV Shows</Nav.Link>
-            <Nav.Link className="fw-bold text-white">Movies</Nav.Link>
-            <Nav.Link className="fw-bold text-white">Recently Added</Nav.Link>
-            <Nav.Link className="fw-bold text-white">My List</Nav.Link>
+            <Link
+              to="/"
+              className={
+                location.pathname === "/"
+                  ? "nav-link fw-bold active"
+                  : "nav-link fw-bold text-secondary "
+              }
+            >
+              Home
+            </Link>
+            <Link
+              to="/tv-shows"
+              className={
+                location.pathname === "/tv-shows"
+                  ? "nav-link fw-bold active"
+                  : "nav-link fw-bold text-secondary "
+              }
+            >
+              TV Shows
+            </Link>
+            <Link
+              to="/movies"
+              className={
+                location.pathname === "/movies"
+                  ? "nav-link fw-bold active"
+                  : "nav-link fw-bold text-secondary "
+              }
+            >
+              Movies
+            </Link>
+            <Link
+              to="/recently-added"
+              className={
+                location.pathname === "/recently-added"
+                  ? "nav-link fw-bold active"
+                  : "nav-link fw-bold text-secondary "
+              }
+            >
+              Recently Added
+            </Link>
+            <Link
+              to="/my-list"
+              className={
+                location.pathname === "/my-list"
+                  ? "nav-link fw-bold active"
+                  : "nav-link fw-bold text-secondary "
+              }
+            >
+              My List
+            </Link>
+            <Link
+              to="/profile"
+              className={
+                location.pathname === "/profile"
+                  ? "nav-link fw-bold active"
+                  : "nav-link fw-bold text-secondary "
+              }
+            >
+              Profile
+            </Link>
           </Nav>
 
           <div className="d-flex align-items-center text-white">
